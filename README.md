@@ -6,9 +6,11 @@ The workflow to generate AMIs is done using pull requests.
 Request using PRs provide history, gating, reviewing and an approval
 process.
 
-The image builder cloudformation templates should be added to Sage-Bionetworks/aws-infra
-repo in the ImageBuilder directory.  Sceptre configs will then reference a
-versioned (or tagged) instance of the cloudformation template to build the AMIs.
+The image builder cloudformation templates should be added to
+[Sage-Bionetworks/aws-infra](https://github.com/Sage-Bionetworks/aws-infra)
+repo in the templates/ImageBuilder directory.  Sceptre configs will then
+reference a versioned (or tagged) instance of the cloudformation template
+to build the AMIs.
 
 ## Contributions
 Contributions are welcome.
