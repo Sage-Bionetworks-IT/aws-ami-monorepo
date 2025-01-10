@@ -37,6 +37,14 @@ then delete (or de-register) them.
 
 __NOTE__: Steps above can also be done using the `sceptre delete` command or the AWS CLI.
 
+### Testing Images
+To test an image we recommend that you manually provision an EC2 instance from the
+AMI image then connect to it using the [AWS session manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html)
+or [SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html).
+Validate that the instance contains everything that was specified from the image builder and
+that it's generally running as expected.
+
+
 ## Contributions
 Contributions are welcome.
 
