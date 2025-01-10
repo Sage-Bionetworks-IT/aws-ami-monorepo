@@ -19,7 +19,7 @@ a versioned (or tagged) instance of the cloudformation template.
 to deploy to the AWS org-sagebase-imagecentral account which will then
 trigger a build of the AMI.
 5. The AMI will be shared to all accounts in our AWS organization which
-means that it is searchable using the 
+means that it is searchable using the
 
 ### Removing Images
 Important info when removing image builder resources and the generated
