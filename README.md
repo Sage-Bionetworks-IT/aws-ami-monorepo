@@ -10,7 +10,8 @@ The image builder cloudformation templates should be added to
 [Sage-Bionetworks/aws-infra](https://github.com/Sage-Bionetworks/aws-infra)
 repo in the templates/ImageBuilder directory.  Sceptre configs will then
 reference a versioned (or tagged) instance of the cloudformation template
-to build the AMIs.
+to deploy to the AWS org-sagebase-imagecentral account which will then
+trigger a build of the AMI.
 
 ## Contributions
 Contributions are welcome.
