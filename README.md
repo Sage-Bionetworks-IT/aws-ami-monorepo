@@ -35,6 +35,8 @@ situations where it is appropriate to delete AMIs, for example when testing AMIs
 To delete AMIs go into the AWS console EC2 -> Images -> AMIs, search for the AMIs
 then delete (or de-register) them.
 
+__NOTE__: Steps above can also be done using the `sceptre delete` command or the AWS CLI.
+
 ## Contributions
 Contributions are welcome.
 
