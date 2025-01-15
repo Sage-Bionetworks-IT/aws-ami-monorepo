@@ -169,3 +169,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# lambda artifacts
+lambdas/*.zip
+
+# MAC Crap
+.DS_Store
+
+# temp files
+/temp/
