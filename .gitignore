@@ -178,3 +178,6 @@ lambdas/*.zip
 
 # temp files
 /temp/
+
+# jetbrains
+.idea/
