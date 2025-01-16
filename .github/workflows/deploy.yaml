@@ -14,7 +14,7 @@ jobs:
       - uses: pre-commit/action@v3.0.0
   sceptre-deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: [ 'pre-commit' ]
     permissions:
       id-token: write
