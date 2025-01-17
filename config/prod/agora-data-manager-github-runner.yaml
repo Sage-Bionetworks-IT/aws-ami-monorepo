@@ -1,9 +1,9 @@
 template:
   type: "http"
-  url: "https://raw.githubusercontent.com/Sage-Bionetworks/aws-infra/v0.9.3/templates/ImageBuilder/amazon-linux-2023-agora-bastian.yaml"
+  url: "https://raw.githubusercontent.com/Sage-Bionetworks/aws-infra/v0.9.4/templates/ImageBuilder/amazon-linux-2023-agora-bastian.yaml"
 stack_name: "agora-data-manager-github-runner"
 stack_tags:
   OwnerEmail: "it@sagebase.org"
   CostCenter: "Platform Infrastructure / 990300"
 parameters:
-  ImageVersion: "0.0.1"
+  ImageVersion: "0.9.4"
