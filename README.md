@@ -34,19 +34,25 @@ also searchable using the AWS CLI
 
 
 ### Updating Images
-To update an image the cloudformation template we must update two repos
+To update an image the we must first update aws-infra then this repo.
 
 Update the cloudformation template in aws-infra:
-1. Create a PR to update the cloudformation template in the aws-infra repo
+1. Create a PR to update the ImageBuilder cloudformation template in the aws-infra repo
 2. Review, approve and Merge the PR
 3. Tag the repo with a version number
 
 Update the Sceptre config in this repo:
-1. Create a PR to update the url reference to the cloudformation template in
-   the Sceptre config in the `config/prod` directory
-2. An update to the image definition (or cloudformation template) may require
-   an `ImageVersion` update as well otherwise cloudformation will fail with a
-   message like `The following resource XXXXX already exists..`.
+1. Create a PR to update the template `url` reference and `ImageVersion` number
+in the Sceptre config file.
+2. Review, approve and Merge the PR
+3. Once merged the cloudformation template will be deploy which will trigger
+an update to the AMI.  AMIs are immutable therefore AWS will create a new AMI
+on every change.  The updated AMIs will retain the same name, only the version
+number is updated.
+
+__Note__: An update to the image definition (or cloudformation template) requires
+an `ImageVersion` update otherwise cloudformation may fail with a message similar to
+`The following resource XXXXX already exists..`.
 
 ### Removing Images
 Important info when removing image builder resources and the generated
@@ -62,7 +68,7 @@ situations where it is appropriate to delete AMIs, for example when testing AMIs
 To delete AMIs go into the AWS console EC2 -> Images -> AMIs, search for the AMIs
 then delete (or de-register) them.
 
-__NOTE__: Steps above can also be done using the `sceptre delete` command or the AWS CLI.
+__NOTE__: Step #2 above can also be done using the `sceptre delete` command or the AWS CLI.
 
 ### Testing Images
 To test an image we recommend that you manually provision an EC2 instance from the
