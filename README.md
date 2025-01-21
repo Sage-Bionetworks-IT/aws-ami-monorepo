@@ -45,7 +45,7 @@ Update the Sceptre config in this repo:
 1. Create a PR to update the template `url` reference and `ImageVersion` number
 in the Sceptre config file.
 2. Review, approve and Merge the PR
-3. Once merged the cloudformation template will be deploy which will trigger
+3. Once merged the cloudformation template will be deployed which will trigger
 an update to the AMI.  AMIs are immutable therefore AWS will create a new AMI
 on every change.  The updated AMIs will retain the same name, only the version
 number is updated.
