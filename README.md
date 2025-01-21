@@ -23,7 +23,7 @@ a versioned (or tagged) instance of the cloudformation template.  Set the
 the `ImageVersion` to the same number as the aws-infra repo tag (i.e. 0.9.2 without the `v`).
 It must match a [semantic version](https://semver.org/) number.
 2. Create a PR to merge the new config into the `main` branch.
-3. Once the PR is merged, the cloudformation template will be deploy to the
+3. Once the PR is merged, the cloudformation template will be deployed to the
 AWS org-sagebase-imagecentral account which will in turn trigger a build
 of the image which will generate an AMI.
 4. The AMI will be shared to all accounts in our AWS organization which
