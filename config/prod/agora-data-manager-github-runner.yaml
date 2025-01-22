@@ -6,5 +6,4 @@ stack_tags:
   OwnerEmail: "jessica.britton@sagebase.org"
   CostCenter: "Agora / 112300"
 parameters:
-  ImageVersion: "0.9.4"
-  VolumeSize: "50"
+  ImageVersion: "1.0.0"
