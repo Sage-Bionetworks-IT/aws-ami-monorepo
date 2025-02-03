@@ -3,21 +3,21 @@ ci:
   skip: ["check-stack-tag-values"] # work around for https://github.com/pre-commit-ci/issues/issues/241
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/adrienverge/yamllint
-    rev: v1.30.0
+    rev: v1.35.1
     hooks:
     -   id: yamllint
 -   repo: https://github.com/awslabs/cfn-python-lint
-    rev: v0.77.0
+    rev: v1.23.1
     hooks:
     -   id: cfn-python-lint
         files: templates/.*\.(json|yml|yaml)$
 -   repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.1
+    rev: v1.5.5
     hooks:
     -   id: remove-tabs
 -   repo: https://github.com/sceptre/sceptrelint
@@ -31,7 +31,7 @@ repos:
            --file=https://mips-api.finops.sageit.org/tags
          ]
 -   repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.22.0
+    rev: 0.31.1
     hooks:
       - id: check-github-workflows
       - id: check-github-actions
