@@ -27,17 +27,27 @@ convention (i.e. X.Y.Z). We typically start with `1.0.0` and increment as needed
 AWS org-sagebase-imagecentral account which will in turn trigger a build
 of the image which will generate an AMI.
 4. The AMI will be publicly shared to __ALL__ AWS accounts which
-means that it is searchable from any AWS accounts using either the
+means that it is searchable from any AWS account using either the
 AWS console EC2 Instances->AMIs or Image Builder->Images pages. The AMI is
 also searchable using the AWS CLI
 [describe-images command](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html).
 
+Note: Due to an AWS bug, the AMI tags are not be copied from the source AMI
+to shared accounts as mentioned in the documentation
+[Share an AMI with specific AWS accounts - Amazon Elastic Compute Cloud](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-explicit.html)..
+```
+Tags – You can't share user-defined tags (tags that you attach to an AMI). When you share an AMI,
+your user-defined tags are not available to any AWS account that the AMI is shared with.
+```
 
 ### Updating Images
-To update an image we must first update aws-infra then this repo.
+Updating an image is a two step process:
+1. Update the cloudformation template in the aws-infra repo
+2. Update update Sceptre config in this repo.
 
 Update the cloudformation template in aws-infra:
-1. Create a PR to update the ImageBuilder cloudformation template in the aws-infra repo
+1. Create a PR to update the
+[ImageBuilder cloudformation template](https://github.com/Sage-Bionetworks/aws-infra/tree/master/templates/ImageBuilder)
 2. Review, approve and Merge the PR
 3. Tag the repo with a version number
 
