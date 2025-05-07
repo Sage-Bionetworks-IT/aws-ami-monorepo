@@ -4,6 +4,6 @@ template:
 stack_name: "agora-data-manager-github-runner"
 stack_tags:
   OwnerEmail: "jessica.britton@sagebase.org"
-  CostCenter: "Agora / 112300"
+  CostCenter: "AMP-AD DCC / 101500"
 parameters:
   ImageVersion: "1.0.0"
