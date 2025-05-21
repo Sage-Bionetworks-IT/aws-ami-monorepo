@@ -1,9 +1,9 @@
 template:
   type: "http"
-  url: "https://raw.githubusercontent.com/Sage-Bionetworks/aws-infra/v0.10.0/templates/ImageBuilder/cis-for-eb-image-pipeline-template.yaml"
+  url: "https://raw.githubusercontent.com/Sage-Bionetworks/aws-infra/v0.10.1/templates/ImageBuilder/cis-for-eb-image-pipeline-template.yaml"
 stack_name: "cis-for-beanstalk-image-pipeline"
 stack_tags:
   OwnerEmail: "it@sagebase.org"
   CostCenter: "Platform Infrastructure / 990300"
 parameters:
-  ImageVersion: "1.0.2"
+  ImageVersion: "1.0.3"
