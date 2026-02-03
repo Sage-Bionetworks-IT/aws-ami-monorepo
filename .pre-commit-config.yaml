@@ -8,16 +8,16 @@ repos:
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
     -   id: yamllint
 -   repo: https://github.com/awslabs/cfn-python-lint
-    rev: v1.43.1
+    rev: v1.43.4
     hooks:
     -   id: cfn-python-lint
         files: templates/.*\.(json|yml|yaml)$
 -   repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: v1.5.6
     hooks:
     -   id: remove-tabs
 -   repo: https://github.com/sceptre/sceptrelint
@@ -31,7 +31,7 @@ repos:
            --file=https://mips-api.finops.sageit.org/tags
          ]
 -   repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.36.0
+    rev: 0.36.1
     hooks:
       - id: check-github-workflows
       - id: check-github-actions
