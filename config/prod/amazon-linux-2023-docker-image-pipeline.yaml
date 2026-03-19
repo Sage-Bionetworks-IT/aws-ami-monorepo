@@ -1,0 +1,9 @@
+template:
+  type: "http"
+  url: "https://raw.githubusercontent.com/Sage-Bionetworks/aws-infra/v0.10.7/templates/ImageBuilder/amazon-linux-2023-docker.yaml"
+stack_name: "amazon-linux-2023-docker-image-pipeline"
+stack_tags:
+  OwnerEmail: "it@sagebase.org"
+  CostCenter: "Platform Infrastructure / 990300"
+parameters:
+  ImageVersion: "1.0.0"
